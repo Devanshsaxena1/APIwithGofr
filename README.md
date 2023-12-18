@@ -2,7 +2,7 @@
 
 # Car Garage Management Service
 
-#Overview:
+# Overview:
 The Car Garage Management Service is a RESTful API developed in Go using the GoFr framework. It facilitates the management of cars entering, staying, and leaving a hypothetical garage.
 
 Key Features:
