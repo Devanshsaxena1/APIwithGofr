@@ -26,7 +26,8 @@ Follow these steps to set up the development environment:
 
     bash
     go mod download
-    use command to install modules: go mod init <your directory name>
+    use command to install modules: go mod init <yourdirectoryname>
+    
     use go get command to import packages 
 
     This command will download and install all required Go dependencies for the project.
