@@ -57,50 +57,59 @@ Follow these steps to set up the development environment:
 
 ## API Endpoints
 
-### `POST /cars`
+**POST /cars**
+Description: Endpoint to add a new car.
+Postman Equivalent:
+Method: POST
+URL: http://localhost:8080/cars
+Body:
+Select raw and JSON (application/json)
+Body content:
+json
+Copy code
+{
+    "brand": "Toyota",
+    "model": "Corolla",
+    "description": "Test car"
+}
+Send the request.
 
-- Description: Endpoint to add a new car.
-- Example Request:
-    ```bash
-    curl -X POST http://localhost:8080/cars -d '{"brand":"Toyota","model":"Corolla","description":"Test car"}'
-    ```
-- Expected Response: HTTP Status 201 Created
+**GET /cars**
+Description: Endpoint to retrieve all cars.
+Postman Equivalent:
+Method: GET
+URL: http://localhost:8080/cars
+Send the request.
+GET /cars/{id}
+Description: Endpoint to retrieve a specific car by ID.
+Postman Equivalent:
+Method: GET
+URL: http://localhost:8080/cars/1 (replace 1 with the desired car ID)
+Send the request.
 
-### `GET /cars`
+**PUT /cars/{id}**
+Description: Endpoint to update a specific car by ID.
+Postman Equivalent:
+Method: PUT
+URL: http://localhost:8080/cars/1 (replace 1 with the desired car ID)
+Body:
+Select raw and JSON (application/json)
+Body content:
+json
+Copy code
+{
+    "brand": "UpdatedBrand",
+    "model": "UpdatedModel",
+    "description": "UpdatedDescription"
+}
+Send the request.
 
-- Description: Endpoint to retrieve all cars.
-- Example Request:
-    ```bash
-    curl http://localhost:8080/cars
-    ```
-- Expected Response: A JSON array of cars.
-
-### `GET /cars/{id}`
-
-- Description: Endpoint to retrieve a specific car by ID.
-- Example Request:
-    ```bash
-    curl http://localhost:8080/cars/1
-    ```
-- Expected Response: Details of the car with the specified ID.
-
-### `PUT /cars/{id}`
-
-- Description: Endpoint to update a specific car by ID.
-- Example Request:
-    ```bash
-    curl -X PUT http://localhost:8080/cars/1 -d '{"brand":"UpdatedBrand","model":"UpdatedModel","description":"UpdatedDescription"}'
-    ```
-- Expected Response: Updated details of the car with the specified ID.
-
-### `DELETE /cars/{id}`
-
-- Description: Endpoint to delete a specific car by ID.
-- Example Request:
-    ```bash
-    curl -X DELETE http://localhost:8080/cars/1
-    ```
-- Expected Response: HTTP Status 200 OK on successful deletion.
+**DELETE /cars/{id}**
+Description: Endpoint to delete a specific car by ID.
+Postman Equivalent:
+Method: DELETE
+URL: http://localhost:8080/cars/1 (replace 1 with the desired car ID)
+Send the request.
 
 ## Testing
 
